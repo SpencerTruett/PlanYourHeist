@@ -1,0 +1,11 @@
+C:\Users\gilde\workspace\csharp\exercises\PlanYourHeist\obj\Debug\netcoreapp3.1\PlanYourHeist.csprojAssemblyReference.cache
+C:\Users\gilde\workspace\csharp\exercises\PlanYourHeist\obj\Debug\netcoreapp3.1\PlanYourHeist.AssemblyInfoInputs.cache
+C:\Users\gilde\workspace\csharp\exercises\PlanYourHeist\obj\Debug\netcoreapp3.1\PlanYourHeist.AssemblyInfo.cs
+C:\Users\gilde\workspace\csharp\exercises\PlanYourHeist\bin\Debug\netcoreapp3.1\PlanYourHeist.exe
+C:\Users\gilde\workspace\csharp\exercises\PlanYourHeist\bin\Debug\netcoreapp3.1\PlanYourHeist.deps.json
+C:\Users\gilde\workspace\csharp\exercises\PlanYourHeist\bin\Debug\netcoreapp3.1\PlanYourHeist.runtimeconfig.json
+C:\Users\gilde\workspace\csharp\exercises\PlanYourHeist\bin\Debug\netcoreapp3.1\PlanYourHeist.runtimeconfig.dev.json
+C:\Users\gilde\workspace\csharp\exercises\PlanYourHeist\bin\Debug\netcoreapp3.1\PlanYourHeist.dll
+C:\Users\gilde\workspace\csharp\exercises\PlanYourHeist\bin\Debug\netcoreapp3.1\PlanYourHeist.pdb
+C:\Users\gilde\workspace\csharp\exercises\PlanYourHeist\obj\Debug\netcoreapp3.1\PlanYourHeist.dll
+C:\Users\gilde\workspace\csharp\exercises\PlanYourHeist\obj\Debug\netcoreapp3.1\PlanYourHeist.pdb
