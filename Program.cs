@@ -25,10 +25,20 @@ namespace PlanYourHeist {
 
                     listOfTeamMembers.Add (teamMember);
                 } else {
+                    Console.WriteLine ("Please Enter the Bank's Difficulty (1-100)...");
+                    string bankDifficultyLevel = Console.ReadLine ();
+                    int bankNumber = int.Parse (bankDifficultyLevel);
+                    int combinedSkillLevel = 0;
+
                     foreach (Dictionary<string, string> member in listOfTeamMembers) {
-                        // Iterate the KeyValuePairs of the Dictionary
-                        foreach (KeyValuePair<string, string> memberInfo in member) {
-                            Console.WriteLine ($"{memberInfo.Key}: {memberInfo.Value}");
+                        string skillLevel = member["Skill"];
+                        int skillNumber = int.Parse (skillLevel);
+                        combinedSkillLevel += skillNumber;
+
+                        if (combinedSkillLevel >= bankNumber) {
+                            Console.WriteLine ("You could pull off this heist!");
+                        } else {
+                            Console.WriteLine ("Not a chance. Recruit some more and try again.");
                         }
                     }
                     break;
