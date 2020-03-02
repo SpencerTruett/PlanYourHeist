@@ -9,11 +9,11 @@ namespace PlanYourHeist
     {
       List<Dictionary<string, string>> listOfTeamMembers = new List<Dictionary<string, string>>();
 
+      Console.WriteLine("Plan Your Heist!");
       while (true)
       {
 
         Dictionary<string, string> teamMember = new Dictionary<string, string>();
-        Console.WriteLine("Plan Your Heist!");
         Console.WriteLine("Please Enter a Name (Or leave blank to move on)...");
         string teamMemberName = Console.ReadLine();
         teamMember.Add("Name", teamMemberName);
@@ -40,6 +40,9 @@ namespace PlanYourHeist
           Console.WriteLine("How many times would you like to run the scenario?");
           string trialRuns = Console.ReadLine();
           int trialRunsNumber = int.Parse(trialRuns);
+          int successfulRun = 0;
+          int unsuccessfulRun = 0;
+
           foreach (Dictionary<string, string> member in listOfTeamMembers)
           {
             string skillLevel = member["Skill"];
@@ -60,12 +63,15 @@ namespace PlanYourHeist
             if (combinedSkillLevel >= bankNumber)
             {
               Console.WriteLine("You could pull off this heist!");
+              successfulRun += 1;
             }
             else
             {
               Console.WriteLine("Not a chance. Recruit some more and try again.");
+              unsuccessfulRun += 1;
             }
 
+            Console.WriteLine($"You succeeded {successfulRun} times! And Failed {unsuccessfulRun} times!");
           }
           break;
         }
