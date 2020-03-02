@@ -10,7 +10,7 @@ namespace PlanYourHeist {
 
                 Dictionary<string, string> teamMember = new Dictionary<string, string> ();
                 Console.WriteLine ("Plan Your Heist!");
-                Console.WriteLine ("Please Enter a Name...");
+                Console.WriteLine ("Please Enter a Name (Or leave blank to move on)...");
                 string teamMemberName = Console.ReadLine ();
                 teamMember.Add ("Name", teamMemberName);
 
@@ -29,17 +29,24 @@ namespace PlanYourHeist {
                     string bankDifficultyLevel = Console.ReadLine ();
                     int bankNumber = int.Parse (bankDifficultyLevel);
                     int combinedSkillLevel = 0;
+                    Random rand = new Random ();
+                    int luckValue = rand.Next (-10, 11);
+                    bankNumber += luckValue;
 
                     foreach (Dictionary<string, string> member in listOfTeamMembers) {
                         string skillLevel = member["Skill"];
                         int skillNumber = int.Parse (skillLevel);
                         combinedSkillLevel += skillNumber;
+                    }
 
-                        if (combinedSkillLevel >= bankNumber) {
-                            Console.WriteLine ("You could pull off this heist!");
-                        } else {
-                            Console.WriteLine ("Not a chance. Recruit some more and try again.");
-                        }
+                    Console.WriteLine ($"Team's Combined Skill: {combinedSkillLevel}");
+                    Console.WriteLine ($"Bank Difficulty: {bankNumber}");
+                    Console.WriteLine ($"Luck Value: {luckValue}");
+
+                    if (combinedSkillLevel >= bankNumber) {
+                        Console.WriteLine ("You could pull off this heist!");
+                    } else {
+                        Console.WriteLine ("Not a chance. Recruit some more and try again.");
                     }
                     break;
                 }
